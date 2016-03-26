@@ -1,0 +1,14 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>An extremely important question.</h1>
+  <form action="/band" method="post" name="band">
+      {{ form.hidden_tag() }}
+      <p>
+          What's the best band in the world:<br>
+          {{ form.band(size=80) }}<br>
+      </p>
+      <p><input type="submit" value="Fuck yeah"></p>
+  </form>
+{% endblock %}
